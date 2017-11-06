@@ -1,0 +1,44 @@
+{
+  "name": "basic-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.prod.js --progress --colors",
+    "develop": "webpack-dev-server --config config/webpack.dev.js --inline --progress --watch --colors",
+    "reinstall": "rm -rf node_modules/ && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piotrjaw/basic-setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piotrjaw/basic-setup/issues"
+  },
+  "homepage": "https://github.com/piotrjaw/basic-setup#readme",
+  "devDependencies": {
+    "autoprefixer": "7.1.6",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.1",
+    "clean-webpack-plugin": "0.1.17",
+    "css-loader": "0.28.7",
+    "extract-text-webpack-plugin": "3.0.2",
+    "html-webpack-plugin": "2.30.1",
+    "node-sass": "4.6.0",
+    "postcss-loader": "2.0.8",
+    "rucksack-css": "1.0.2",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "uglifyjs-webpack-plugin": "1.0.1",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4",
+    "webpack-merge": "4.1.1"
+  },
+  "dependencies": {
+    "normalize.css": "7.0.0"
+  }
+}

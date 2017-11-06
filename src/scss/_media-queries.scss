@@ -1,0 +1,96 @@
+// -------------------------------------------------
+// Simpler media queries
+// -------------------------------------------------
+$xxsm-breakpoint: 460px;
+$xsm-breakpoint: 768px;
+$sm-breakpoint: 880px;
+$md-breakpoint: 1000px;
+$lg-breakpoint: 1200px;
+$xlg-breakpoint: 1440px;
+$xxlg-breakpoint: 1680px;
+
+$screen: "only screen";
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+// Retina
+$retina: (
+  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+  "#{$screen} and (min-device-pixel-ratio: 2)",
+  "#{$screen} and (min-resolution: 192dpi)",
+  "#{$screen} and (min-resolution: 2dppx)"
+);
+
+@mixin retina {
+  @media #{$retina} {@content}
+}
+
+// Down
+$xxsm-down: "#{$screen} and (max-width: #{$xxsm-breakpoint - 1})";
+$xsm-down: "#{$screen} and (max-width: #{$xsm-breakpoint - 1})";
+$sm-down: "#{$screen} and (max-width: #{$sm-breakpoint - 1})";
+$md-down: "#{$screen} and (max-width: #{$md-breakpoint - 1})";
+$lg-down: "#{$screen} and (max-width: #{$lg-breakpoint - 1})";
+$xlg-down: "#{$screen} and (max-width: #{$xlg-breakpoint - 1})";
+$xxlg-down: "#{$screen} and (max-width: #{$xxlg-breakpoint - 1})";
+
+@mixin xxsm-down {
+  @media #{$xxsm-down} {@content}
+}
+@mixin xsm-down {
+  @media #{$xsm-down} {@content}
+}
+@mixin sm-down {
+  @media #{$sm-down} {@content}
+}
+@mixin md-down {
+  @media #{$md-down} {@content}
+}
+@mixin lg-down {
+  @media #{$lg-down} {@content}
+}
+@mixin xlg-down {
+  @media #{$xlg-down} {@content}
+}
+@mixin xxlg-down {
+  @media #{$xxlg-down} {@content}
+}
+
+// Up
+$xxsm-up: "#{$screen} and (min-width: #{$xxsm-breakpoint})";
+$xsm-up: "#{$screen} and (min-width: #{$xsm-breakpoint})";
+$sm-up: "#{$screen} and (min-width: #{$sm-breakpoint})";
+$md-up: "#{$screen} and (min-width: #{$md-breakpoint})";
+$lg-up: "#{$screen} and (min-width: #{$lg-breakpoint})";
+$xlg-up: "#{$screen} and (min-width: #{$xlg-breakpoint})";
+$xxlg-up: "#{$screen} and (min-width: #{$xxlg-breakpoint})";
+
+@mixin xxsm-up {
+  @media #{$xxsm-up} {@content}
+}
+@mixin xsm-up {
+  @media #{$xsm-up} {@content}
+}
+@mixin sm-up {
+  @media #{$sm-up} {@content}
+}
+@mixin md-up {
+  @media #{$md-up} {@content}
+}
+@mixin lg-up {
+  @media #{$lg-up} {@content}
+}
+@mixin xlg-up {
+  @media #{$xlg-up} {@content}
+}
+@mixin xxlg-up {
+  @media #{$xxlg-up} {@content}
+}
+@mixin landscape {
+  @media #{$landscape} {@content}
+}
+@mixin portrait {
+  @media #{$portrait} {@content}
+}
