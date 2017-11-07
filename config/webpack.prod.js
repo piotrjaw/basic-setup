@@ -1,7 +1,7 @@
-const webpack = require('webpack');
+/* eslint-disable comma-dangle */
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = require('./webpack.common');
 
@@ -28,3 +28,4 @@ module.exports = merge(config, {
     new ExtractTextPlugin('[name]-[hash:6].css'),
   ]
 });
+/* eslint-enable */

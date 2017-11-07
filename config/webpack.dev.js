@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+/* eslint-disable comma-dangle */
 const merge = require('webpack-merge');
 
 const config = require('./webpack.common');
@@ -13,7 +13,7 @@ module.exports = merge(config, {
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ]
       }
     ]
@@ -21,12 +21,14 @@ module.exports = merge(config, {
   devServer: {
     port: 3000,
     host: '0.0.0.0',
+    historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000,
       lazy: true,
-      ignored: /node_modules/
+      ignored: /node_modules/,
     },
     stats: 'errors-only'
   }
 });
+/* eslint-enable */

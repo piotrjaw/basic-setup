@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BasePage from 'pages/BasePage';
+import BaseComponent from 'pages/BaseComponent';
 
-export default class About extends BasePage {
+export default class {{ properCase name }} extends BaseComponent {
   static propTypes = {
     children: PropTypes.node,
   };
@@ -10,7 +10,7 @@ export default class About extends BasePage {
   render() {
     return (
       <div>
-        Hello AboutPage
+        Hello {{ properCase name }}Component
       </div>
     );
   }
